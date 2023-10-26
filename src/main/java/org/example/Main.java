@@ -1,17 +1,24 @@
 package org.example;
 
-import java.security.interfaces.DSAKey;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         JavaSchoolStarter javaSchoolStarter = new JavaSchoolStarter();
-        List<Map<String,Object>> result1 = javaSchoolStarter.execute("INSERT VALUES " +
-                "'lastName' = 'Федоров' , " +
-                "'id'=3, 'age'=40, 'active'=true");
+        try {
+           javaSchoolStarter.execute(
+                    "INSERT VALUES 'id' = 1, 'name' = 'Ilya', 'counter' = false, 'surname' = 'Ivanov'");
+            javaSchoolStarter.execute(
+                    "INSERT VALUES 'id' = 2, 'name' = 'Redor', 'counter' = true, 'surname' = 'Sidorov'");
 
+            javaSchoolStarter.execute(
+                    "UPDATE VALUES 'name' = 'Ilya' WHERE 'id' = 3");
+
+            javaSchoolStarter.execute("SELECT");
+
+           javaSchoolStarter.execute("DELETE WHERE 'id' = 3");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }
