@@ -7,12 +7,12 @@ public class Main {
         JavaSchoolStarter javaSchoolStarter = new JavaSchoolStarter();
         try {
            javaSchoolStarter.execute(
-                    "INSERT VALUES 'id' = 1, 'name' = 'Ilya', 'counter' = false, 'surname' = 'Ivanov'");
+                    "INSERT VALUES 'id' = 1, 'name' = 'Ilya', 'counter' = false, 'surname' = 'Merenkov'");
             javaSchoolStarter.execute(
-                    "INSERT VALUES 'id' = 2, 'name' = 'Redor', 'counter' = true, 'surname' = 'Sidorov'");
+                    "INSERT VALUES 'id' = 2, 'name' = 'Filipp', 'counter' = false, 'surname' = 'Sheinberger'");
 
             javaSchoolStarter.execute(
-                    "UPDATE VALUES 'name' = 'Ilya' WHERE 'id' = 3");
+                    "UPDATE VALUES 'name' = 'Vladimir' WHERE 'id' = 2");
 
             javaSchoolStarter.execute("SELECT");
 
